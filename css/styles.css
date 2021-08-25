@@ -30,6 +30,8 @@ body {
     background-position: inherit;
     background-repeat: no-repeat;
     background-color: #010048; }
+    body.check.plate {
+      background-color: #711313; }
 
 section {
   position: relative;
@@ -55,6 +57,9 @@ h1 {
 
 h2 {
   font-size: 45px; }
+
+h3 {
+  font-size: 25px; }
 
 h4 {
   font-size: 22px; }
@@ -234,8 +239,8 @@ button {
   .menu-drawer img {
     width: 30px;
     position: absolute;
-    top: 3rem;
-    right: 30%;
+    top: 3.7rem;
+    right: 29.5%;
     cursor: pointer; }
   .menu-drawer.active {
     z-index: 110;
@@ -251,8 +256,14 @@ button {
   .menu-items a {
     text-transform: uppercase;
     font-size: 35px;
-    color: white;
+    color: #010030;
     line-height: 2.5; }
+    .menu-items a:hover {
+      color: white; }
+  .menu-items.home a {
+    color: white; }
+    .menu-items.home a:hover {
+      color: #010030; }
 
 footer {
   background: #010030; }
@@ -319,7 +330,7 @@ footer {
 .landing.alt h1 {
   font-size: 50px; }
 .landing.alt p {
-  width: 540px; }
+  width: 500px; }
 .landing.check {
   height: auto;
   padding-top: 4rem;
@@ -508,6 +519,8 @@ section#mission {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .portal-frame.alt {
+    background: #010048; }
 
 .check-result {
   display: none;
@@ -538,6 +551,8 @@ section#mission {
   padding-bottom: 2rem; }
   .pp-cta a {
     color: white; }
+    .pp-cta a:hover {
+      color: #C9A100; }
 
 .result-text {
   margin-bottom: 1rem; }
@@ -653,26 +668,26 @@ section#mission {
 
 .split-section-text.alt {
   padding-left: 17%;
-  padding-right: 10rem; }
+  padding-right: 13rem; }
 
 .section-div.fit-content {
   min-height: 733px;
   display: flex;
   flex-direction: row; }
 
-#protecting {
-  background-image: url("../img/protecting.png");
-  background-color: #C9A100;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  min-height: auto; }
-  #protecting .section-div {
-    justify-content: flex-start; }
+.src {
+  color: #A6ADB4; }
+  .src:hover {
+    color: white; }
+  .src div {
+    width: fit-content; }
 
-.protecting {
-  padding: 100px 0;
-  width: 500px; }
+.src-title {
+  font-size: 14px;
+  font-weight: bold; }
+
+.src-link {
+  font-size: 13px; }
 
 .location-text {
   color: white;
@@ -799,6 +814,18 @@ section#mission {
   h1 {
     font-size: 75px; }
 
+  h2 {
+    font-size: 40px; }
+
+  section {
+    padding-top: 8rem;
+    padding-bottom: 8rem; }
+
+  .section-CTA {
+    background: #711313;
+    text-align: center;
+    padding: 7rem 0; }
+
   .container {
     max-width: 1340px;
     padding-right: 0 !important;
@@ -808,8 +835,8 @@ section#mission {
     max-width: 1100px;
     margin: auto; }
 
-  h2 {
-    font-size: 40px; }
+  .menu-items a {
+    font-size: 30px; }
 
   .page-top.home {
     min-height: 700px; }
@@ -818,7 +845,7 @@ section#mission {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 500px;
+    min-height: 528px;
     padding: 5rem; }
     .portal-frame .form span {
       margin: 0 .5rem; }
@@ -827,7 +854,11 @@ section#mission {
     width: 950px; }
 
   .landing.home .landing-text {
-    padding-top: 0; } }
+    padding-top: 0; }
+
+  .page-top.alt .landing-text {
+    padding-top: 8rem;
+    padding-bottom: 8rem; } }
 @media (max-width: 1350px) {
   .container {
     max-width: 1140px;

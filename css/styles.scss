@@ -48,6 +48,10 @@ body{
     background-position: inherit;
     background-repeat: no-repeat;
     background-color: $blue;
+    &.plate{
+      background-color: $red;
+
+    }
   }
 }
 section{
@@ -79,6 +83,9 @@ h1{
 }
 h2{
   font-size: 45px;
+}
+h3{
+  font-size: 25px;
 }
 h4{
   font-size: 22px;
@@ -280,8 +287,8 @@ button{
   img{
     width: 30px;
     position: absolute;
-    top: 3rem;
-    right: 30%;
+    top: 3.7rem;
+    right: 29.5%;
     cursor: pointer;
   }
   &.active{
@@ -300,8 +307,17 @@ button{
   a{
     text-transform: uppercase;
     font-size: 35px;
-    color: white;
+    color: $off-black;
     line-height: 2.5;
+    &:hover{
+      color: white;
+    }
+  }
+  &.home a{
+    color: white;
+    &:hover{
+      color: $off-black;
+    }
   }
 }
 footer{
@@ -357,7 +373,6 @@ footer{
     background-position: center;
     height: 100vh;
     min-height: 950px;
-
   }
   &.alt{
     background: $red;
@@ -365,7 +380,7 @@ footer{
       padding-top: 10rem;
       padding-bottom: 10rem;
       width: 595px;
-    }
+  }
   }
 }
 
@@ -387,7 +402,7 @@ footer{
       font-size: 50px;
     }
     p{
-      width: 540px;
+      width: 500px;
     }
   }
   &.check{
@@ -620,6 +635,9 @@ section#mission{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  &.alt{
+    background: $blue;
+  }
 }
 .check-result{
   display: none;
@@ -656,6 +674,9 @@ section#mission{
   padding-bottom: 2rem;
   a{
     color:white;
+    &:hover{
+      color: $yellow;
+    }
   }
 }
 
@@ -800,7 +821,7 @@ section#mission{
 
 .split-section-text.alt {
   padding-left: 17%;
-  padding-right: 10rem;
+  padding-right: 13rem;
 }
 
 .section-div.fit-content{
@@ -808,21 +829,41 @@ section#mission{
   display: flex;
   flex-direction: row;
 }
-#protecting{
-  background-image: url("../img/protecting.png");
-  background-color: $yellow;
-  background-repeat: no-repeat;;
-  background-size: cover;
-  background-position: bottom;
-  min-height: auto;
-  .section-div{
-    justify-content: flex-start;
+
+.src{
+  color: #A6ADB4;
+  &:hover{
+    color: white;
+  }
+  div{
+    width: fit-content;
   }
 }
-.protecting{
-  padding: 100px 0;
-  width: 500px;
+.src-title{
+  font-size: 14px;
+  font-weight: bold;
 }
+.src-link{
+  font-size: 13px;
+}
+
+
+
+// #protecting{
+//   background-image: url("../img/protecting.png");
+//   background-color: $yellow;
+//   background-repeat: no-repeat;;
+//   background-size: cover;
+//   background-position: bottom;
+//   min-height: auto;
+//   .section-div{
+//     justify-content: flex-start;
+//   }
+// }
+// .protecting{
+//   padding: 100px 0;
+//   width: 500px;
+// }
 .location-text{
   color: white;
   display: flex;
@@ -986,43 +1027,61 @@ section#mission{
     font-size: 75px;
   }
 
+  h2{
+    font-size: 40px;
+  }
 
+  section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+  }
 
-.container{
-  max-width: 1340px;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+  .section-CTA {
+    background: #711313;
+    text-align: center;
+    padding: 7rem 0;
 }
 
-.container-inner{
-  max-width: 1100px;
-  margin: auto;
-}
+  .container{
+    max-width: 1340px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 
-h2{
-  font-size: 40px;
-}
+  .container-inner{
+    max-width: 1100px;
+    margin: auto;
+  }
 
-.page-top.home {
-    min-height: 700px;
-}
-.portal-frame .form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 500px;
-  padding: 5rem;
-  span{
-    margin: 0 .5rem;
+  .menu-items a {
+    font-size: 30px;
+  }
+
+  .page-top.home {
+      min-height: 700px;
+  }
+  .portal-frame .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 528px;
+    padding: 5rem;
+    span{
+      margin: 0 .5rem;
+    }
+  }
+  .section-CTA h2 {
+    width: 950px;
+  }
+  .landing.home .landing-text {
+    padding-top: 0;
+  }
+  .page-top.alt .landing-text {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
   }
 }
-.section-CTA h2 {
-  width: 950px;
-}
-.landing.home .landing-text {
-    padding-top: 0;
-}
-}
+
 
 @media (max-width: 1350px){
   .container{
