@@ -27,3 +27,10 @@ $(".submit-button").click(function () {
           $( ".check-result.notice" ).append("<div class='result'><h3>VIOLATION RECORDED</h3><span class='result-text'>Your vehicle was recorded by our traffic enforcement camera to have committed a violation against Ordinance No. 572 of Bataan. Please settle your violation <b>within five (5) working days</b> upon receipt of the violation. Failure to settle your violation within the prescribed period will be taken as an admission of guilt and shall be seen as a waiver of such right to contest the violation or present evidence as a defense.</span><img src='img/placeholder result 1 alt.png' style='width: 100%'><span class='result-options'>Proceed to the payment page for more information or refer to our FAQs</span><div class='resultUI'><div class='btn-UI'><a href='payment.html'><button class='notice-btn btn-yellow-blk'>HOW TO PAY</button></a><a href='faqs.html'><button class='notice-btn btn-yellow-blk'>FAQS</button></a></div></div></div>");
 
 });
+
+
+for (let i = 1; i < 4; i++){
+var txt= $('.news' + i).text();
+if(txt.length > 120)
+    $('.news' + i).text(txt.substring(0,120) + '.....');
+  }

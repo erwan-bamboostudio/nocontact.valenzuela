@@ -1,19 +1,15 @@
 // font-family: 'Nunito', sans-serif;
-// font-family: 'Poppins', sans-serif;
 // font-family: 'Belleza', sans-serif;
 
 $off-black: #010030;
 $blue: #010048;
+$light-blue: #04044C;
 $dark-red: #5D0000;
 $red: #711313;
 $light-red: #940505;
 $yellow: #C9A100;
 
 
-@font-face{
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins/Poppins-light.otf');
-}
 @font-face{
   font-family: 'Gilroy';
   src: url('../fonts/Gilroy/Gilroy-Light.otf');
@@ -40,7 +36,7 @@ html, body{
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gilroy', sans-serif;
   color: white;
   background: $red;
   overflow-x: hidden;
@@ -51,6 +47,7 @@ body{
     background-image: url("../img/Check Logo Background.png");
     background-position: inherit;
     background-repeat: no-repeat;
+    background-color: $blue;
   }
 }
 section{
@@ -66,32 +63,35 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
 h1, h2, h3, label{
   font-family: 'Gilroy';
   text-transform: uppercase;
 }
 h1{
   font-size: 85px;
+  &.alt{
+    font-size: 50px;
+  }
 }
 h2{
   font-size: 45px;
-  padding-bottom: 2rem;
 }
 h4{
   font-size: 22px;
-  font-family: 'Poppins';
 }
 h5{
   font-size: 16px;
-  font-family: 'Poppins';
-  font-weight: bold;
 }
 h6{
   font-size: 20px;
-  font-weight: 'Poppins'
 }
 p{
   font-size: 22px;
+  padding-bottom: 0;
 }
 label{
   font-size: 20px;
@@ -107,12 +107,12 @@ a, a:hover{
   display: block !important;
 }
 button{
-  font-family: 'Gilroy-bold';
+  font-family: 'Gilroy';
   font-size: 18px;
   width: 220px;
   border: none;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.4rem 0.5rem;
   color: white;
   border-radius: 28px;
   &.btn-sm{
@@ -138,6 +138,16 @@ button{
   }
 }
 
+.btn-yellow-alt{
+  background: $yellow;
+  transition: background .2s;
+  color: $off-black;
+  &:hover{
+    background: $red;
+    color: white;
+  }
+}
+
 .btn-blue{
   background: $blue;
   transition: background .2s;
@@ -148,7 +158,7 @@ button{
 }
 
 .btn-red{
-  background: $blue;
+  background: $red;
   transition: background .2s;
   &:hover{
     background: $yellow;
@@ -169,6 +179,18 @@ button{
 }
 .no-margin{
   margin: 0;
+}
+.pad-b-1{
+  padding-bottom: 1rem;
+}
+.pad-b-2{
+  padding-bottom: 2rem;
+}
+.pad-t-1{
+  padding-top: 1rem;
+}
+.pad-t-2{
+  padding-top: 2rem;
 }
 .no-b-padding{
   padding-bottom: 0 !important;
@@ -218,6 +240,11 @@ button{
 }
 .logoH{
   width: 100%;
+  max-width: 600px;
+}
+
+.header-logo{
+  width: 50%;
 }
 
 .nav{
@@ -246,8 +273,7 @@ button{
   background: $yellow;
   opacity: 0;
   color: white;
-  transition: opacity .3s;
-  font-family: 'Belleza', sans-serif;
+  transition: opacity .2s;
   &.alt{
     background: $red;
   }
@@ -272,7 +298,7 @@ button{
   justify-content: center;
   align-items: center;
   a{
-    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
     font-size: 35px;
     color: white;
     line-height: 2.5;
@@ -311,6 +337,7 @@ footer{
   align-items: center;
   img{
     width: 100%;
+    max-width: 600px;
   }
 }
 .background{
@@ -337,6 +364,7 @@ footer{
     .landing-text{
       padding-top: 10rem;
       padding-bottom: 10rem;
+      width: 595px;
     }
   }
 }
@@ -364,8 +392,8 @@ footer{
   }
   &.check{
     height: auto;
-    margin-top: 5rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -378,8 +406,10 @@ footer{
     align-items: center;
   }
   &.check{
-    margin-top: 10rem;
-    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7.8rem;
   }
   h1{
     padding: 0;
@@ -586,7 +616,7 @@ section#mission{
   height: 100%;
 }
 .portal-frame{
-  background: $blue;
+  background: $red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -596,7 +626,11 @@ section#mission{
   padding: 2rem;
 }
 .portal-frame .form{
-  padding: 9rem;
+  padding: 7rem 9rem;
+  min-height: 597px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   label{
     margin: 0;
   }
@@ -616,6 +650,15 @@ section#mission{
     color: $yellow;
   }
 }
+
+.pp-cta{
+  text-align: right;
+  padding-bottom: 2rem;
+  a{
+    color:white;
+  }
+}
+
 .result-text {
   margin-bottom: 1rem;
 }
@@ -664,6 +707,7 @@ section#mission{
 #location{
   height: 100%;
   min-height: auto;
+  background-color: $blue;
 }
 #split-section{
   position: relative;
@@ -702,6 +746,63 @@ section#mission{
     }
   }
 }
+
+.program-split {
+  display: grid;
+
+}
+
+.split-left {
+  grid-template-columns: 45% 55%;
+}
+
+.split-right {
+  grid-template-columns: 55% 45%;
+}
+
+.split-img img {
+  width: 100%;
+}
+
+.split-img,
+.split-content2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  overflow: hidden;
+}
+
+.split-content,
+.split-img2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  overflow: hidden;
+}
+
+.split-content {
+  background-color: $light-blue;
+}
+
+.split-content2 {
+  background-color: $dark-red;
+}
+
+.split-content,
+.split-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-section-text {
+  padding-left: 10rem;
+  padding-right: 17%;
+}
+
+.split-section-text.alt {
+  padding-left: 17%;
+  padding-right: 10rem;
+}
+
 .section-div.fit-content{
   min-height: 733px;
   display: flex;
@@ -723,7 +824,7 @@ section#mission{
   width: 500px;
 }
 .location-text{
-  color: $off-black;
+  color: white;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -766,9 +867,6 @@ section#mission{
   }
 }
 
-#location{
-  background-color: $yellow;
-}
 .payment-options{
   width: 50%;
   padding: 5rem 0 5rem 10%;
@@ -786,7 +884,7 @@ section#mission{
     padding-top: 1rem;
   }
   p{
-    width: 415px;
+    width: 525px;
   }
 }
 
@@ -844,13 +942,9 @@ section#mission{
 }
 #privacy{
   background-color: white;
-  color: $red
+  color: $off-black;
 }
 
-.payment h5{
-  font-family: 'Belleza', sans-serif;
-  font-weight: normal;
-}
 
 .copyright{
   position: absolute;
@@ -887,30 +981,43 @@ section#mission{
 }
 
 @media (max-width: 1550px){
+
+  h1{
+    font-size: 75px;
+  }
+
+
+
 .container{
   max-width: 1340px;
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+
 .container-inner{
   max-width: 1100px;
   margin: auto;
 }
-  h2{
-    font-size: 40px;
+
+h2{
+  font-size: 40px;
+}
+
+.page-top.home {
+    min-height: 700px;
+}
+.portal-frame .form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: 5rem;
+  span{
+    margin: 0 .5rem;
   }
-  .portal-frame .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 500px;
-    padding: 5rem;
-    span{
-      margin: 0 .5rem;
-    }
-  }
-  .section-CTA h2 {
-    width: 950px;
+}
+.section-CTA h2 {
+  width: 950px;
 }
 .landing.home .landing-text {
     padding-top: 0;
@@ -937,6 +1044,10 @@ section#mission{
   }
   .menu-drawer {
     width: 45%;
+  }
+
+  .our-mission p {
+    width: 800px;
   }
 
   .news-section, .section-CTA {
