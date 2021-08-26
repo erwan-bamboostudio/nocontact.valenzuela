@@ -463,6 +463,11 @@ section#mission {
     align-self: center;
     width: 100%; }
 
+.carousel-inner .news:hover {
+  box-shadow: -1px 0px 43px 17px #010030 inset;
+  -webkit-box-shadow: -1px 0px 43px 17px #010030 inset;
+  -moz-box-shadow: -1px 0px 43px 17px #010030 inset; }
+
 .carousel-indicators {
   bottom: -4rem; }
   .carousel-indicators li {

@@ -573,6 +573,12 @@ section#mission{
   }
 }
 
+.carousel-inner .news:hover{
+  box-shadow: -1px 0px 43px 17px rgba(1,0,48,1) inset;
+-webkit-box-shadow: -1px 0px 43px 17px rgba(1,0,48,1) inset;
+-moz-box-shadow: -1px 0px 43px 17px rgba(1,0,48,1) inset;
+}
+
 .carousel-indicators {
     bottom: -4rem;
     li{
@@ -592,7 +598,7 @@ section#mission{
   background-size: cover;
   background-repeat: no-repeat;
   width: 33%;
-  background-position: center; 
+  background-position: center;
 }
 .carousel-cards{
   position: relative;
@@ -926,7 +932,7 @@ section#mission{
   position: relative;
   iframe{
     height: 732px;
-    margin-bottom: -7px; 
+    margin-bottom: -7px;
   }
 }
 
