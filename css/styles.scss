@@ -54,6 +54,11 @@ body{
     }
   }
 }
+
+.maintenance{
+  display: none;
+}
+
 section{
   position: relative;
   padding-top: 10rem;
@@ -407,7 +412,7 @@ footer{
   }
   &.check{
     height: auto;
-    padding-top: 4rem;
+    padding-top: 6rem;
     padding-bottom: 1rem;
   }
 }
@@ -508,6 +513,7 @@ section#mission{
   display: grid;
   grid-template-columns: 100px 200px 600px;
   width: fit-content;
+  width: max-content;
 }
 .grid-item{
   padding: 0;
@@ -586,7 +592,7 @@ section#mission{
   background-size: cover;
   background-repeat: no-repeat;
   width: 33%;
-  background-position: center;
+  background-position: center; 
 }
 .carousel-cards{
   position: relative;
@@ -781,6 +787,19 @@ section#mission{
   grid-template-columns: 55% 45%;
 }
 
+.split-img{
+  background: #04044C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-img2{
+  background: $dark-red;
+  img{
+    height: 100%;
+  }
+}
+
 .split-img img {
   width: 100%;
 }
@@ -817,6 +836,8 @@ section#mission{
 .split-section-text {
   padding-left: 10rem;
   padding-right: 17%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .split-section-text.alt {
@@ -837,6 +858,7 @@ section#mission{
   }
   div{
     width: fit-content;
+    width: max-content;
   }
 }
 .src-title{
@@ -1094,9 +1116,13 @@ section#mission{
     margin: auto;
   }
 
-    h2{
-      font-size: 35px;
-    }
+  h1 {
+    font-size: 62px;
+  }
+
+  h2{
+    font-size: 35px;
+  }
 
   .navbar-nav {
     position: relative;
@@ -1108,6 +1134,22 @@ section#mission{
   .our-mission p {
     width: 800px;
   }
+
+  .split-left{
+    grid-template-columns: 50% 50%;
+  }
+
+  .split-section-text {
+    padding-left: 4rem;
+    padding-right: 14%;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    &.alt{
+      padding-right: 4rem;
+      padding-right: 14%;
+    }
+  }
+
 
   .news-section, .section-CTA {
     padding: 5rem 0;
@@ -1126,11 +1168,31 @@ section#mission{
     grid-gap: 1rem;
   }
   .section-CTA h2 {
-    width: 800px;
+    width: 850px;
   }
 }
 
 @media (max-width: 1255px){
+
+  // _______________________ Under Construction_____________
+  body{
+    overflow: hidden;
+  }
+  .maintenance{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    min-height: 500px;
+    background: $yellow;
+    color: $off-black;
+    z-index: 10000;
+  }
+  // _____________________________________________________
   .container{
     max-width: 1040px;
     padding-right: 0 !important;
