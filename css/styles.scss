@@ -58,6 +58,9 @@ body{
 .maintenance{
   display: none;
 }
+.mobile{
+  display: none !important;
+}
 
 section{
   position: relative;
@@ -183,14 +186,14 @@ button{
   color: $off-black;
 }
 
-.background-dark-blue{
-  background: $red;
-}
 .background-darker-blue{
   background: $off-black;
 }
 .no-margin{
   margin: 0;
+}
+.no-margin-b{
+  margin-bottom: 0;
 }
 .pad-b-1{
   padding-bottom: 1rem;
@@ -282,6 +285,7 @@ button{
   top: 0;
   width: 35%;
   height: 100vh;
+  min-height: 500px;
   background: $yellow;
   opacity: 0;
   color: white;
@@ -328,8 +332,11 @@ button{
 footer{
   background: $off-black;
 }
+.footer-logo-img-sp{
+  display: none;
+}
 .footer{
-  padding:80px 0;
+  padding:3rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -513,7 +520,7 @@ section#mission{
   display: grid;
   grid-template-columns: 100px 200px 600px;
   width: fit-content;
-  width: max-content;
+  // width: max-content;
 }
 .grid-item{
   padding: 0;
@@ -609,13 +616,16 @@ section#mission{
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   position: relative;
+}
+
+.card-text{
+  margin-top: 20rem;
 }
 
 .card{
   background: transparent linear-gradient(195deg, #010066 0%, #27266b 100%) 0% 0% no-repeat padding-box;
-
 }
 
 .section-CTA{
@@ -808,6 +818,7 @@ section#mission{
 
 .split-img img {
   width: 100%;
+  padding: 5rem 0;
 }
 
 .split-img,
@@ -864,7 +875,7 @@ section#mission{
   }
   div{
     width: fit-content;
-    width: max-content;
+    // width: max-content;
   }
 }
 .src-title{
@@ -960,6 +971,7 @@ section#mission{
 
 #faqs{
   background-color: white;
+  background-image: url('../img/FAQS BG.png');
   background-size: cover;
   background-repeat: repeat-y;
   a{
@@ -1108,6 +1120,9 @@ section#mission{
       padding-top: 8rem;
       padding-bottom: 8rem;
   }
+  .card-text {
+    margin-top: 17rem;
+}
 }
 
 
@@ -1128,6 +1143,9 @@ section#mission{
 
   h2{
     font-size: 35px;
+  }
+  h3 {
+    font-size: 22px;
   }
 
   .navbar-nav {
@@ -1176,28 +1194,31 @@ section#mission{
   .section-CTA h2 {
     width: 850px;
   }
+  .card-text {
+    margin-top: 15rem;
+  }
 }
 
 @media (max-width: 1255px){
 
   // _______________________ Under Construction_____________
-  body{
-    overflow: hidden;
-  }
-  .maintenance{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    min-height: 500px;
-    background: $yellow;
-    color: $off-black;
-    z-index: 10000;
-  }
+  // body{
+  //   overflow: hidden;
+  // }
+  // .maintenance{
+  //   position: absolute;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-content: center;
+  //   text-align: center;
+  //   height: 100vh;
+  //   width: 100%;
+  //   min-height: 500px;
+  //   background: $yellow;
+  //   color: $off-black;
+  //   z-index: 10000;
+  // }
   // _____________________________________________________
   .container{
     max-width: 1040px;
@@ -1232,29 +1253,41 @@ section#mission{
       }
     }
   }
-  .section-CTA h2 {
-    width: 800px;
-}
 
+  .landing-text.check {
+    padding-left: 3rem;
+  }
+
+  #steps {
+    background-position: center;
+  }
 }
 
 // Ipad Design
 @media (max-width: 1150px){
   .container-inner, .container-r, .container-l {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
   .container, .container-inner, .container-r, .container-l{
     max-width: 900px;
-    margin: auto !important;
   }
   .container{
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .container-r, .container-l {
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
   }
 
   .tablet{
     display: block;
+  }
+
+  h1 {
+    font-size: 58px;
   }
 
   h2{
@@ -1262,14 +1295,28 @@ section#mission{
   }
 
   h3{
-    font-size: 25px;
+    // font-size: 25px;
   }
   h4{
     font-size: 20px;
   }
 
   p{
-    font-size: 16px;
+    font-size: 21px;
+  }
+
+  .footer-logo img {
+    width: 78%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .footer-logo-img{
+    display: none;
+  }
+
+  .footer-logo-img-sp{
+    display: block;
   }
 
   section{
@@ -1292,6 +1339,14 @@ section#mission{
     }
   }
 
+  .header-logo {
+    width: 60%;
+  }
+
+  .logoH {
+    max-width: 504px;
+  }
+
   .menu-drawer {
     width: 50%;
     img {
@@ -1301,15 +1356,20 @@ section#mission{
   }
 
   .page-top.home {
-    background-image: url("../img/Landing Background IPAD.png");
     background-position: center;
   }
   .page-top.check{
     height: auto;
   }
-  .landing.home p{
-    margin-bottom: 1rem;
-  }
+  .landing.home {
+    h1{
+      width: 850px;
+    }
+    p{
+      margin-bottom: 1rem;
+      width: 785px;
+    }
+}
 
   .landing-text {
     padding-top: 6rem;
@@ -1318,7 +1378,11 @@ section#mission{
     }
     &.check{
       padding-top: 0;
-      padding-bottom: 3rem;
+      width: 100%;
+      margin-bottom: 2rem;
+      h1{
+        padding: 0;
+      }
     }
   }
 
@@ -1353,17 +1417,16 @@ section#mission{
   }
 
   #steps {
-    background-position: center;
     .label{
       display: none;
     }
   }
   .steps h2{
-    width: 650px;
+    width: 500px;
   }
 
   .grid-container {
-    grid-template-columns: 28% auto;
+    grid-template-columns: 20% auto;
   }
 
   .middle-grid {
@@ -1399,7 +1462,6 @@ section#mission{
     .grid-text-content{
     }
     h3{
-      text-shadow: 0px 3px 6px #003651;
       padding: 0;
     }
     p{
@@ -1441,21 +1503,9 @@ section#mission{
     width: 100%;
   }
 
-  .protecting {
-    padding: 50px 0;
-  }
-
-  .landing.check{
-    margin-top: 7rem;
-  }
-
-  .landing-text.check{
-    width: 100%;
-    margin-bottom: 5rem;
-    h1{
-      padding: 0;
-    }
-  }
+  // .protecting {
+  //   padding: 50px 0;
+  // }
 
   .portal-container {
     grid-template-columns: 100%;
@@ -1522,6 +1572,10 @@ section#mission{
   #location .map {
     min-height: 500px;
   }
+  .location-text ul li {
+    max-width: 335px;
+  }
+
   .payment-options {
     width: 100%;
   }
@@ -1533,15 +1587,47 @@ section#mission{
       background: none !important;
     }
   }
+  .card-info {
+    justify-content: space-between;
+  }
   .card-text{
+    margin-top: 0;
     p{
-      display: none;
+      margin-bottom: 0;
     }
+  }
+  .carousel-cards {
+    flex-direction: column;
+  }
+  .card.news{
+    width: 100%;
+  }
+  .card-info {
+    height: 200px;
+  }
+  .section-CTA .container-inner{
+    padding-right: 0;
+    padding-left: 0;
   }
 
 }
 
 @media (max-width: 950px){
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block !important;
+  }
+  h1 {
+    font-size: 46px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
   .container, .container-inner, .container-r, .container-l{
     max-width: 740px;
   }
@@ -1555,33 +1641,71 @@ section#mission{
       opacity: 1;
     }
   }
-  .carousel-cards {
-    flex-direction: column;
+  .landing.home {
+    h1, p{
+      width: auto;
+    }
   }
-  .card.news{
-    width: 100%;
+  .landing.alt h1 {
+    font-size: 40px;
+  }
+
+  .our-mission p{
+    width: auto;
+  }
+
+  .section-CTA h2 {
+    width: auto;
   }
   .card-info {
     height: 300px;
   }
-  .section-CTA h2 {
-    width: auto;
+  .grid-container {
+    grid-template-columns: 26% auto;
+  }
+
+  .program-split{
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  .split-content, .split-img2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .split-img, .split-content2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .split-section-text {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .split-img img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .split-img2 img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .split-img{
+    padding-bottom: 5rem;
+  }
+
 }
-}
+
 
 @media (max-width: 800px){
 
-  .container{
-    max-width: 640px;
+
+  .container, .container-inner, .container-r, .container-l {
+    max-width: 600px;
   }
-  .container-inner{
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-  .container-inner {
-    padding-right: 3rem !important;
-    padding-left: 3rem !important;
-}
+
   .logoH {
     width: 350px;
   }
@@ -1593,30 +1717,26 @@ section#mission{
     }
   }
 
-
   .landing.home h1 {
-    font-size: 60px;
-    width: 400px;
+    font-size: 50px;
   }
 
+  section#mission {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 0 auto;
+  }
   .grid-item .icon-background {
-    width: 7.5rem;
-    height: 7.5rem;
+    display: none;
   }
 
   .grid-text {
     p {
     margin-bottom: 0;
     }
-  }
-
-  .steps h2 {
-    width: 350px;
-  }
-
-  .section-CTA h2 {
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 
   .page-top.check{
@@ -1626,31 +1746,34 @@ section#mission{
     font-size: 20px;
   }
   .landing-text.check {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
   }
   .no-result {
     padding: 0;
   }
-}
-@media (max-width: 800px){
-  .container, .container-inner, .container-r, .container-l {
-    max-width: 600px;
-}
   .resultUI{
     text-align: center;
   }
   .btn-UI {
     flex-direction: column;
   }
+  .split-section-text.alt {
+      padding-left: 3rem;
+      padding-right: 3rem;
+  }
 }
 
 @media (max-width: 635px){
+
+  .mobile{
+    display: block;
+  }
   .container, .container-inner, .container-r, .container-l, #split-section .split-section, #location .split-section {
     max-width: 500px;
   }
-  .container-inner, .container-r, .container-l {
-    padding-right: 0rem !important;
-    padding-left: 0rem !important;
+  .container-inner, .container-r, .container-l{
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
   }
   .navbar-brand{
     display: none;
@@ -1659,16 +1782,28 @@ section#mission{
     display: block;
   }
   .logoH-mobile{
-    width: 75%;
+    width: 25%;
   }
 
-  h1, .landing-text h1{
-    font-size: 40px;
+  button {
+    width: 175px;
+    font-size: 16px;
+  }
+
+  .btn-spacer {
+    width: 1rem;
+  }
+
+  h1, .landing.home h1{
+    font-size: 43px;
   }
   h2{
     font-size: 35px;
   }
-  h3, .section-CTA h2 {
+  .steps h2 {
+    width: auto;
+  }
+  .section-CTA h2 {
     font-size: 30px;
   }
   .footer{
@@ -1695,24 +1830,21 @@ section#mission{
   }
   .menu-drawer {
     img {
-    top: 2.4rem;
-    right: 14%;
+    top: 2.6rem;
+    right: 12%;
     }
   }
   .page-top.home {
-    background-image: url("../img/Landing Background SP.png");
     background-position: center;
     min-height: auto;
   }
   .page-top.alt {
-    height: 24rem;
-  }
-  .page-top.alt {
-  .landing-text {
-    padding-top: 3rem;
-  }
-  .landing{
-    display: block;
+    .landing-text {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+    .landing{
+      display: block;
   }
 }
 
@@ -1746,22 +1878,40 @@ section#mission{
       min-height: 420px;
     }
   }
-  .split-section-text, .protecting{
-    width: auto;
-    padding: 0;
+  .split-img {
+    padding-bottom: 0;
+    img {
+      height: auto;
+    }
   }
-  .landing{
-    min-height: 330px;
+  .split-section-text {
+      padding-top: 5rem;
+      padding-bottom: 0rem;
+      &.alt{
+        padding-bottom: 5rem;
+      }
   }
 
-  .landing.check {
-    margin-top: 1rem;
-}
-  .landing-text {
-    padding-top: 4rem;
+  // .split-section-text, .protecting{
+  //   width: auto;
+  //   padding: 0;
+  // }
+
+  .page-top.alt .landing-text {
+    width: auto;
+  }
+  .landing{
+    min-height: 316px;
+  }
+  .landing.alt p {
+    width: auto;
   }
   .landing.check {
-    margin-top: 3rem;
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+  .landing-text {
+    padding-top: 4rem;
   }
   .portal-frame .form {
     min-height: 500px;
@@ -1800,6 +1950,9 @@ section#mission{
       }
     }
   }
+  #payment p {
+    width: auto;
+  }
 }
 
 @media (max-width: 535px){
@@ -1816,6 +1969,9 @@ section#mission{
   .news-section, .section-CTA {
     padding: 5rem 0;
   }
+  .steps h2 {
+    width: 450px;
+  }
 }
 
 @media (max-width: 420px){
@@ -1824,34 +1980,37 @@ section#mission{
     padding-right: 5% !important;
     padding-left: 5% !important;
 }
-.landing.home h1 {
-    font-size: 40px;
-}
 .landing-text {
     width: 100%;
     padding-top: 5rem;
     &.check{
       padding-bottom: 0;
+      h1{
+        padding-left: 1rem;
+      }
+    }
+    h1 {
+      margin-bottom: 1rem;
     }
   }
-  .landing-text p, .grid-text p, #payment p {
+.landing-text p, .grid-text p, #payment p {
       width: auto;
   }
 .landing.home {
     p {
     width: 100%;
+    margin-bottom: 0;
   }
   h1{
-    width: 265px
+    width: 265px;
+    font-size: 40px;
   }
 }
 
-.landing-text.check h1 {
-  padding-left: 1rem;
+.landing-btn {
+    flex-direction: column;
 }
-  .landing-text h1 {
-      margin-bottom: 2rem;
-  }
+
   h1, .landing-text h1 {
     font-size: 32px;
   }
@@ -1898,6 +2057,9 @@ section#mission{
   #steps {
     background-position: center;
   }
+  #steps, .grid-item h3 {
+    text-align: center;
+  }
   .portal-frame .form {
     min-height: auto;
     padding: 3rem 2rem;
@@ -1931,6 +2093,9 @@ section#mission{
   #split-section .split-section.program1, #location .split-section.program1 {
     padding: 5rem 0;
   }
+  .split-img img {
+    width: 100%;
+  }
   .overlay-result p {
     width: 100%;
   }
@@ -1940,9 +2105,21 @@ section#mission{
   .no-result {
     padding: 0 ;
   }
+  .page-top.home {
+    height: inherit;
+  }
 }
 
 @media (max-width: 375px){
+  h1{
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 31px;
+  }
+  h3, .section-CTA h2 {
+    font-size: 20px;
+  }
   #split-section, #location, .payment-options{
     .split-section.program1, .split-section {
     }
@@ -1951,11 +2128,17 @@ section#mission{
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
+  .landing.home {
+    min-height: 525px;
+    height: auto;
+    min-height: inherit;
+    padding-bottom: 2.5rem;
+  }
   .landing.home .landing-text {
     padding-top: 10%;
   }
-  .page-top.home{
-    height: auto;
+  .landing.alt h1{
+    font-size: 35px;
   }
   .no-result{
     padding: 0;
@@ -1969,4 +2152,55 @@ section#mission{
   .landing-text.check h1 {
     padding-left: 0;
   }
+  section, section#mission, .section-CTA, .payment-options, .split-section-text, .split-section-text.alt {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .split-content .split-img img{
+    padding-top: 0;
+  }
+  .menu-drawer img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 375px){
+  .landing.alt h1 {
+    font-size: 35px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .menu-items a {
+    font-size: 25px;
+  }
+  .split-img2 img {
+    height: 300px;
+  }
+  .portal-frame .form input[type=text] {
+    padding: 6px;
+  }
+  .logoH-mobile {
+    width: 36%;
+  }
+
+}
+
+@media (max-width: 280px){
+  .card-info {
+    height: 332px;
+  }
+  .menu-drawer{
+    height: 110vh;
+  }
+  .menu-tems{
+    padding-bottom: 10vh;
+  }
+
 }

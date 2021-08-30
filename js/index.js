@@ -32,5 +32,11 @@ $(".submit-button").click(function () {
 for (let i = 1; i < 4; i++){
 var txt= $('.news' + i).text();
 if(txt.length > 120)
-    $('.news' + i).text(txt.substring(0,120) + '.....');
+    $('.news' + i).text(txt.substring(0,120) + '...');
   }
+
+// for (let i = 1; i < 4; i++){
+// var txt= $('.news-title' + i).text();
+// if(txt.length > 50)
+//     $('.news-title' + i).text(txt.substring(0,50) + '...');
+//   }
